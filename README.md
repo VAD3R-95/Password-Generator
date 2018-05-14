@@ -12,7 +12,7 @@ Some steps to be taken care of:
 4. Run with python3 gui.py
 5. Sample output file random.txt also included in repo.
 
-Finally the application ouptput:
+Finally the application output:
 
 ![GUI Image](https://vad3rblog.files.wordpress.com/2018/05/img7.png)
 Be safe and generate random passwords :metal:
