@@ -1,6 +1,5 @@
 import sys
 from PyQt4 import QtGui, QtCore
-#from PyQt4.QtCore import QFile
 import random
 
 
@@ -9,13 +8,10 @@ class Window(QtGui.QMainWindow):
     def __init__(self):
         super(Window, self).__init__()  # parent object QMainWindow
         self.passlist = []
- #       print(QFile.exists('favicon-32x32.png'))
 
         self.length = QtGui.QLineEdit(self)   #input box to enter field 
         self.length.setGeometry(50,50,30,20)
-        self.length.move(255,70)
-        #self.length.text()
-        
+        self.length.move(255,70)        
         
         self.textbr = QtGui.QTextBrowser(self) # display output box      
         self.textbr.setGeometry(210,90,230,20)
@@ -27,9 +23,6 @@ class Window(QtGui.QMainWindow):
         
         
         text1 = QtGui.QLabel("Password Generated:",self)
-       #text1 = QtGui.QTextEdit(self)
-       #text1.setReadOnly(True)
-       #text1.textCursor().insertHtml('<b>Password Generated:</b>')
         text1.setGeometry(100,50,140,20)
         text1.move(40,90)
         
@@ -59,9 +52,7 @@ class Window(QtGui.QMainWindow):
         fileMenu.addAction(extractAction2)
  
         self.home()
-
-
-        
+       
     def home(self):
         btn = QtGui.QPushButton("Quit", self)
         btn.clicked.connect(self.close_application) # custom close :)
@@ -120,11 +111,6 @@ class Window(QtGui.QMainWindow):
         passw = "".join(random.sample(self.string,int(final_len)))
         self.passlist.append(passw)
         self.textbr.setText(passw)
-        #print(passw)
-        #print(self.passlist)
-       
-
-
     
 def main():
     app = QtGui.QApplication(sys.argv)
